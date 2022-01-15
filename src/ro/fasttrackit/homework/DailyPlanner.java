@@ -1,16 +1,12 @@
 package ro.fasttrackit.homework;
 
 import java.io.NotActiveException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static ro.fasttrackit.homework.DaysOfTheWeek.*;
 
 public class DailyPlanner {
     private final List<DaySchedule> daySchedules;
-
     public DailyPlanner() {
         daySchedules = List.of(new DaySchedule(MONDAY, new ArrayList<>()),
                 new DaySchedule(TUESDAY, new ArrayList<>()),
