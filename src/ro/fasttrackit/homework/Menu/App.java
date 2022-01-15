@@ -82,6 +82,7 @@ public class App {
         int day = scanner.nextInt();
         DaysOfTheWeek daysSelected = selectDay(day);
         person.removeActivity(daysSelected, activity);
+        System.out.println("Activity removed.");
     }
 
     private DaysOfTheWeek selectDay(int day) {
