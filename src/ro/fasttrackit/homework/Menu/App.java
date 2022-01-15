@@ -71,8 +71,11 @@ public class App {
         displayDays();
         int day = scanner.nextInt();
         DaysOfTheWeek daysSelected = selectDay(day);
-        person.addActivity(daysSelected, activity);
-        System.out.println("Activity added.");
+        if (daysSelected != null)
+        {
+            person.addActivity(daysSelected, activity);
+            System.out.println("Activity added.");
+        }
     }
 
     private void removeActivity() {
@@ -81,8 +84,10 @@ public class App {
         displayDays();
         int day = scanner.nextInt();
         DaysOfTheWeek daysSelected = selectDay(day);
-        person.removeActivity(daysSelected, activity);
-        System.out.println("Activity removed.");
+        if (daysSelected != null){
+            person.removeActivity(daysSelected, activity);
+            System.out.println("Activity removed.");
+        }
     }
 
     private DaysOfTheWeek selectDay(int day) {
